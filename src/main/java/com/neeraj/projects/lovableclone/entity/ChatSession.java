@@ -12,7 +12,7 @@ import java.time.Instant;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ChatSession {
 
-    Project project;
+    com.neeraj.projects.lovableclone.entity.Project project;
 
     User user;
 

@@ -1,4 +1,4 @@
-package com.neeraj.projects.lovable_clone.entity;
+package com.neeraj.projects.lovableclone.entity;
 
 import lombok.AccessLevel;
 import lombok.Getter;

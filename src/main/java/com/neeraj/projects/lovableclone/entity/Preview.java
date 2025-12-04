@@ -1,6 +1,6 @@
 package com.neeraj.projects.lovableclone.entity;
 
-import com.neeraj.projects.lovable_clone.enums.PreviewStatus;
+import com.neeraj.projects.lovableclone.enums.PreviewStatus;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;

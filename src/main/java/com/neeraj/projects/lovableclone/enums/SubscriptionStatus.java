@@ -1,4 +1,4 @@
-package com.neeraj.projects.lovable_clone.enums;
+package com.neeraj.projects.lovableclone.enums;
 
 public enum SubscriptionStatus {
     ACTIVE, TRIALING, CANCELED, PAST_DUE, INCOMPLETE

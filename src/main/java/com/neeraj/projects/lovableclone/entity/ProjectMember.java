@@ -1,6 +1,6 @@
-package com.neeraj.projects.lovable_clone.entity;
+package com.neeraj.projects.lovableclone.entity;
 
-import com.neeraj.projects.lovable_clone.enums.ProjectRole;
+import com.neeraj.projects.lovableclone.enums.ProjectRole;
 
 import java.time.Instant;
 
