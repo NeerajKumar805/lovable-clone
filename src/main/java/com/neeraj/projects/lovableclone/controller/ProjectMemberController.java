@@ -1,8 +1,8 @@
 package com.neeraj.projects.lovableclone.controller;
 
-import com.neeraj.projects.lovableclone.entity.ProjectMember;
 import com.neeraj.projects.lovableclone.dto.member.InviteMemberRequest;
 import com.neeraj.projects.lovableclone.dto.member.MemberResponse;
+import com.neeraj.projects.lovableclone.dto.member.UpdateMemberRoleRequest;
 import com.neeraj.projects.lovableclone.service.ProjectMemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -19,7 +19,7 @@ public class ProjectMemberController {
     private final ProjectMemberService projectMemberService;
 
     @GetMapping
-    public ResponseEntity<List<ProjectMember>> getProjectMembers(@PathVariable Long projectId) {
+    public ResponseEntity<List<MemberResponse>> getProjectMembers(@PathVariable Long projectId) {
         Long userId = 1L;
         return ResponseEntity.ok(projectMemberService.getProjectMembers(projectId, userId));
     }
@@ -39,28 +39,20 @@ public class ProjectMemberController {
     public ResponseEntity<MemberResponse> updateMemberRole(
             @PathVariable Long projectId,
             @PathVariable Long memberId,
-            @RequestBody InviteMemberRequest request
+            @RequestBody UpdateMemberRoleRequest request
     ) {
         Long userId = 1L;
         return ResponseEntity.ok(projectMemberService.updateMemberRole(projectId, memberId, request, userId));
     }
 
     @DeleteMapping("/{memberId}")
-    public ResponseEntity<MemberResponse> updateMemberRole(
+    public ResponseEntity<Void> removeMember(
             @PathVariable Long projectId,
             @PathVariable Long memberId
     ) {
         Long userId = 1L;
-        return ResponseEntity.ok(projectMemberService.deleteProjectMember(projectId, memberId, userId));
+        projectMemberService.removeProjectMember(projectId, memberId, userId);
+        return ResponseEntity.noContent().build();
     }
-
-
-
-
-
-
-
-
-
 
 }

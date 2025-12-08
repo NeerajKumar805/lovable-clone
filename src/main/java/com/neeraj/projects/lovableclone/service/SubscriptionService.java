@@ -4,6 +4,7 @@ import com.neeraj.projects.lovableclone.dto.subscription.CheckoutRequest;
 import com.neeraj.projects.lovableclone.dto.subscription.CheckoutResponse;
 import com.neeraj.projects.lovableclone.dto.subscription.PortalResponse;
 import com.neeraj.projects.lovableclone.dto.subscription.SubscriptionResponse;
+import org.jspecify.annotations.Nullable;
 
 public interface SubscriptionService {
     SubscriptionResponse getCurrentSubscription(Long userId);
